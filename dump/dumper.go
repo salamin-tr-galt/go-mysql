@@ -186,7 +186,8 @@ func (d *Dumper) Dump(w io.Writer) error {
 
 	// Disable uncessary data
 	args = append(args, "--compact")
-	args = append(args, "--skip-opt")
+	// Remove for MySQL 8
+	// args = append(args, "--skip-opt")
 	args = append(args, "--quick")
 
 	// We only care about data
